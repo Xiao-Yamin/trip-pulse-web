@@ -32,7 +32,7 @@ jobs:
               isMobile: true,
               hasTouch: true
             });
-            await page.goto('http://127.0.0.1:8765/?testTime=2026-10-03T10:00&tz=KST', { waitUntil: 'networkidle' });
+            await page.goto('http://127.0.0.1:8765/', { waitUntil: 'networkidle' });
             await page.screenshot({ path: 'docs/screenshots/home.png' });
             await page.evaluate(() => switchView('all'));
             await page.waitForTimeout(250);
